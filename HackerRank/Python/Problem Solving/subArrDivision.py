@@ -6,7 +6,7 @@ def birthday(choc_bar,day_sum,month):
     choc_div = map(lambda x: sum(x) ,zip(*map(lambda x: choc_bar[x:],range(month))))
     filtered_choc = list(filter(lambda x: x == day_sum, choc_div))
     return len(filtered_choc)
-    
+
 
 if __name__ == '__main__':
     n = 100
