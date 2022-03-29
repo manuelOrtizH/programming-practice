@@ -5,10 +5,7 @@ def utopianTree():
     cache = {0: 1}
     def season(n):        
         if n not in cache:
-            if n % 2 == 0:
-                cache[n] = season(n-1)+1
-            else:
-                cache[n] = season(n-1)*2
+            cache[n] = season(n-1)+1 if n % 2 == 0 else season(n-1)*2
         return cache[n]
     return season
 
