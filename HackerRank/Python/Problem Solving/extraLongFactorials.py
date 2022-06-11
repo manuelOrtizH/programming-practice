@@ -1,3 +1,6 @@
+#Manuel Ortiz at 2022
+#Extracted from: https://www.hackerrank.com/challenges/extra-long-factorials/problem
+
 from functools import wraps
 
 def memoize(fn):

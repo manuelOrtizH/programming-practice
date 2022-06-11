@@ -1,6 +1,8 @@
+#Manuel Ortiz at 2022
+#Extracted from: https://www.hackerrank.com/challenges/cut-the-sticks/problem
+
 def cutTheSticks(arr):
     res = [len(arr)]
-    #Could be not sorted, maybe
     arr = sorted(arr)
     actual_value = arr[0]
     counter = 0
