@@ -4,7 +4,7 @@
 def jumpingOnClouds(c,k):
     e = 100
     for cloud in range(0,len(c),k):
-        e -= k
+        e -= 1
         if c[cloud] == 1:
             e-=2
     
