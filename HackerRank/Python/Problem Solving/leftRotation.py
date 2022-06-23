@@ -2,12 +2,7 @@
 #Extracted from: https://www.hackerrank.com/challenges/array-left-rotation/problem
 
 def rotateLeft(d, arr):
-    l = len(arr)
-    result = [0]*l
-    for i in range(l):
-        new_pos = (l + (i-d)) - l
-        result[new_pos] = arr[i]
-    return result
+    return [arr[i] for i in range(d,len(arr))] + [arr[i] for i in range(0,d)] 
 
 if __name__ == '__main__':
     d = 7
