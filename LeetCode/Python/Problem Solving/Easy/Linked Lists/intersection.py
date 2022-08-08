@@ -34,9 +34,6 @@ def get_intersection_node(headA, headB):
 
     return actualB
 
-
-    
-
 if __name__ == '__main__':
     llistA, llistB = create_intersection()
     llistA.display(), llistB.display()
