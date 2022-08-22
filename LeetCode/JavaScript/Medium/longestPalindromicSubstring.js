@@ -38,4 +38,4 @@ const longestPalindrome = (s) => {
 
 const str = "cbbd"
 const res = longestPalindrome(str);
-console.log(res);
+
