@@ -2,6 +2,8 @@ export class Node {
     constructor(data){
         this.data = data;
         this.next = null;
+        // Copy List w/ Random Pointer Problem
+        this.random = null;
     }
 
     display(){
@@ -27,7 +29,3 @@ export class Node {
     }
 }
 
-
-const head = new Node(1)
-head.append(1,2,3)
-head.display()
