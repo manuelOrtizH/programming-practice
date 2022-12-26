@@ -4,6 +4,11 @@ class Node:
         self.left = left
         self.right = right
 
+class Tree:
+    def __init__(self, root=None):
+        self.root = root
+    
+    
 
 def visit(node, children):
     children.append(node.data)

@@ -12,4 +12,3 @@ class Solution:
 
 sol = Solution()
 ans = sol.singleNumber([2,2,1,4,1,3,5,3,5,2])
-print(ans)

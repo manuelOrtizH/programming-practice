@@ -3,9 +3,8 @@
 
 from collections import deque
 
-
 class Solution:
-    def validPath(self, n: int, edges: list[list[int]], start: int, end: int) -> bool:
+    def validPath(self, n: int, edges: List[List[int]], start: int, end: int) -> bool:
         
         graph = dict()
         
@@ -13,26 +12,25 @@ class Solution:
             graph[edge[0]] = graph.get(edge[0], []) + [edge[1]]
             graph[edge[1]] = graph.get(edge[1], []) + [edge[0]]
             
-        stack, visited = deque(), set()
-        stack.append(start)
+        queue, visited = deque(), set()
+        queue.append(start)
         visited.add(start)
 
-        return self.validPathHelper(start, end, graph, stack, visited)
+        return self.validPathHelper(start, end, graph, queue, visited)
         
 
-    def validPathHelper(self, start, end, graph, stack, visited):
+    def validPathHelper(self, start, end, graph, queue, visited):
         
-        if not stack: return False
+        if not queue: return False
 
-        node = stack.pop()
+        node = queue.popleft()
 
         if node == end: return True
 
         for neighbor in graph[node]:
             if neighbor not in visited:
-                stack.append(neighbor)
+                queue.append(neighbor)
+                visited.add(neighbor)
                 
             
-        return self.validPathHelper(start,end,graph,stack,visited)
-
-
+        return self.validPathHelper(start,end,graph,queue,visited)

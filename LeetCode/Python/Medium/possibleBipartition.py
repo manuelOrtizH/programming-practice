@@ -24,7 +24,7 @@ class Solution:
                 return color_dict[person] == color
             
             for disliked_person in graph[person]:
-                if not dfs(disliked_person, PURPLE if color==YELLOW else YELLOW):
+                if not dfs(disliked_person, -color):
                     return False
                     
             return True

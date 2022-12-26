@@ -5,7 +5,7 @@
 from collections import deque
 
 class Solution:
-    def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
+    def canVisitAllRooms(self, rooms: list[list[int]]) -> bool:
         total_rooms = len(rooms)
         queue, keys = deque(), set()
         queue.append(0)
