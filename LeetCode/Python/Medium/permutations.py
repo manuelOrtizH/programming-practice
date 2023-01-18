@@ -1,5 +1,5 @@
 # Manuel Ortiz at 2022
-# Extracted from: https://leetcode.com/problems/permutations-i/
+# Extracted from: https://leetcode.com/problems/permutations/
 
 class Solution:
     def backtracking(self, nums, permutation, result):
