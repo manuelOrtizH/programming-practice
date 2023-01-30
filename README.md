@@ -1,7 +1,6 @@
 # Programming Practice
-Coding practice from different programming languages, primarly JavaScript and Python.
+Coding practice from different programming languages, primarly Python and JavaScript.
 
   - HackerRank Problems
   - LeetCode Problems
-  - Notebooks
   - Coding Exercises
