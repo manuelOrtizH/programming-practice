@@ -7,23 +7,26 @@ class Node:
 class Tree:
     def __init__(self, root=None):
         self.root = root
+        self.children = []
     
-    
+    def visit(self, node):
+        self.children.append(node.data)
 
-def visit(node, children):
-    children.append(node.data)
+    def in_order_traversal(self, root):
+        if root:
+            self.in_order_traversal(root.left)
+            self.visit(root)
+            self.in_order_traversal(root.right)
 
-def in_order_traversal(node, children):
-    if node:
-        in_order_traversal(node.left, children)
-        visit(node, children)
-        in_order_traversal(node.right, children)
-    return children
-
-def in_preorder_traversal(node):
-    if node:
-        visit(node)
-        in_preorder_traversal(node.left)
-        in_preorder_traversal(node.right)
-
+    def in_preorder_traversal(self, root):
+        if root:
+            self.visit(root)
+            self.in_preorder_traversal(root.left)
+            self.in_preorder_traversal(root.right)
+        
+    def in_post_order_traversal(self, root):
+        if root:
+            self.in_post_order_traversal(root.left)
+            self.in_post_order_traversal(root.right)
+            self.visit(root)
 
